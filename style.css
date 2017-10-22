@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.cardItem {
+    background-color: #bfbfbf;
+    width: 99%;
+    margin-top: 15px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d2d2d2;
+    box-shadow: 2px 3px 2px lightgrey;
+    transition: all 1s ease;
+}
+
+.gridCentered {
+    width: 50%;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.column {
+    width: 32%;
+    height: auto;
+    /* background-color: lightgrey; */
+    display: inline-block;
+    vertical-align: top;
+}
+
+.controlPanel {
+    position: absolute;
+    margin-left: 5%;
+}
+
+
+.item_thumbnail {
+    position: relative;
+    float: unset;
+    width: 100%;
+    height: 90px;
+    margin: 3px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.label_box {
+    margin-top: 5px;
+}
+.item_title {
+    font-size: 13px;
+    font-weight: bold;
+}
+.item_description {
+    position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    margin: 4px;
+    margin-top: 7px;
+}
+.column.columnLeft {
+    float: left;
+}
+
+.column.columnRight {
+    float: right;
+}
