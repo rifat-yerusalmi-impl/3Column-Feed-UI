@@ -8,28 +8,23 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-
-
 for (var i = 0; i < cardItem.length; i++) {
 	random = getRndInteger(220, 350);
 	cardItem[i].style.height = random  + 'px';
 }
 
-
-
 var currentItem = 1;
 var shortest;
 
 function fadeIn(item){
-			setTimeout(function() {
-	    		item.style.opacity = '1';
-			}, 100);
+	setTimeout(function() {
+		item.style.opacity = '1';
+		item.style.top = '0';
+	}, 100);
 }
 
 function distributingItens(item){
-
-
-if (document.getElementsByTagName('body')[0].offsetWidth > 766) {
+	if (document.getElementsByTagName('body')[0].offsetWidth > 766) {
 		if (currentItem == 1){
 			leftColumn.appendChild(item) 	
 		} else if (currentItem == 2){
@@ -62,10 +57,7 @@ if (document.getElementsByTagName('body')[0].offsetWidth > 766) {
 }
 
 for (item of cardItem) {
-
 	distributingItens(item);
-
-	
 }
 
 function addNewItem(){
@@ -73,12 +65,11 @@ function addNewItem(){
 		random = getRndInteger(220, 350);
 		item.style.height = random  + 'px';
 		item.style.opacity = '0';
-		console.log()
+		item.style.top = '30px';
 		random = getRndInteger(1, 99);
 		item.childNodes[1].style.backgroundImage = 'url(./img/'+ random +'.jpeg)'
 			distributingItens(item);
 }
-
 
 function columnHeightChecker(){
 	if (document.getElementsByTagName('body')[0].offsetWidth > 766) {
@@ -100,7 +91,6 @@ function columnHeightChecker(){
 	}
 }
 
-
 function columnHeightCheckerLonger(){
 	if (document.getElementsByTagName('body')[0].offsetWidth > 766) {
 		if (leftColumn.offsetHeight > (middleColumn.offsetHeight && rightColumn.offsetHeight) ){
@@ -120,10 +110,6 @@ function columnHeightCheckerLonger(){
 		}
 	}
 }
-
-
-
-
 
 window.addEventListener("scroll", function(){
 	var longest = columnHeightCheckerLonger();
